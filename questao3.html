@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Olá</h1>
+    <h2 id="titulo">Como vai?</h2>
+    <p>(Como vai?) é um exemplo de getElementById() esse método retorna um elemento com um valor especificado.</p>
+    <p>Aqui estou usando getElementById para modificar a cor da letra</p>
+
+    <hr>
+    <p>Essa div demonstra como funciona getElementsByClassName</p>
+    <div class="mdtxt"> Olá como vai</div>
+    <div class="mdtxt"> Olá como vai</div>
+    <p>O getElementsByClassName() é um método que retorna uma coleção de elementos com um nome de classe especificado.</p>
+    <p>Aqui eu tenho uma div com nomes iguais e com o classname eu posso modificar</p>
+    <hr>
+
+    <p>Aqui temos uma lista não ordenada que demonstra tagname: </p>
+    <ul>
+        <li>Dobermann</li>
+        <li>Pug</li>
+        <li>Chow-Chow</li>
+    </ul>
+    <p>O getElementsByTagName() é um método que retorna uma coleção de todos os elementos com um nome de tag especificado.</p>
+    <p>Aqui com o tag name eu posso modificar o primeiro li </p>
+    <hr>
+
+    <h3 class="cor">demostra querySelector</h3>
+    <p> O querySelector() é um método que retorna o primeiro elemento que corresponde a um seletor CSS.</p>
+    <p>Aqui estou modificando o background do h3 para pink usando o queryselector</p>
+    <hr>
+
+    <h2 class="exe">demonstra queryselectorall</h2>
+    <p class="exe">demonstra queryselectorall</p>
+    <p>O querySelectorAll() é um método que retorna todos os elementos que correspondem a uns seletores CSS.</p>
+    <p>Aqui estou modificando o background de um h2 e um p usando queryselectorall</p>
+    <hr>
+
+</body>
+<script> 
+    /*h1 byID*/
+    const myElement = document.getElementById('titulo');
+    myElement.style.color = 'red';
+    /*termina byID*/
+
+    /*começa classname*/
+    const collection = document.getElementsByClassName('mdtxt');
+    collection[0].innerHTML = 'Olá tudo bem?'
+    /*termina classname*/
+
+    /*começa tagname*/
+    document.getElementsByTagName("li")[0].innerHTML = "Dog";
+    /*termina tagname*/
+
+    /*começa queryselector*/
+    document.querySelector("h3").style.backgroundColor = "pink";
+    /*termina queryselector*/
+
+    /*começa queryselectorall*/
+    const nodeList = document.querySelectorAll(".exe");
+    for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].style.backgroundColor = "red";
+    }
+
+    
+</script>
+</html>

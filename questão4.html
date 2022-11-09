@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Exemplo de usar o HTML Dom para atribuir um evento (onmouseover) e (onmouseout) a um elemento h1 e assim neste exemplo ele muda de cor</p>
+    <h1 id = "muda">Passe o mouse sobre mim</h1>
+    <hr>
+
+    <p>Este exemplo usa o método addEventListener para anexar um evento (focus) a um elemento de entrada</p>
+    Digite seu nome: <input type="text" id="nom">
+    <p>Aqui estou mudando o background para vermelho usando o addEventListener e o focus </p>
+    <hr>
+
+    <p>Neste exemplo estou usando o metodo blur que remove o foco de um elemento</p>
+    Digite seu nome: <input type="text" id="foca">
+    <button type="button" onclick="getFocus()">Com foco </button>
+    <button type="button" onclick="loseFocus()">Sem foco</button>
+    <hr>
+
+</body>
+<script>
+
+
+document.getElementById("muda").onmouseover = function() {mouseOver()};
+document.getElementById("muda").onmouseout = function() {mouseOut()};
+function mouseOver(){
+    document.getElementById("muda").style.color = "blue";
+}
+function mouseOut(){
+    document.getElementById("muda").style.color = "black";
+}
+
+document.getElementById("nom").addEventListener("focus", myFunction);
+
+function myFunction() {
+document.getElementById("nom").style.backgroundColor = "red";
+}
+
+function getFocus() {
+  document.getElementById("foca").focus();
+}
+
+function loseFocus() {
+  document.getElementById("foca").blur();
+}
+
+
+</script>
+</html>
