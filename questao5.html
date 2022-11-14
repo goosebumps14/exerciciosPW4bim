@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+
+        let bt = document.getElementsByTagName("button");
+
+        bt[3].onclick = function(){
+            alert('Argumento e Retorno')
+        }
+        bt[4].addEventListener( "click" , Chama());
+            
+    }
+
+        
+        //nomeada
+        function BomDia(){
+                alert("Bom dia :)")
+        }
+
+        //costrutor
+        var i = prompt("digite seu nome:")
+        let NM = new Function('alert("seu nome é " + i )'); 
+          
+       //arrow
+        const num = () =>{ alert(parseInt(Math.random() * 20))} 
+
+        
+        
+        
+    </script>
+</head>
+<body>
+
+    <button onmouseover="BomDia()">Bom dia</buttom> 
+    <button onclick="num()">d20</buttom> 
+    <button onclick="NM()">nome</button>
+
+    <button>argumento/retorno</button>
+    <button>literal</button>
+
+</body>
+</html>
